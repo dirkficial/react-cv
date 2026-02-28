@@ -3,11 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>react-cv</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="general-info">
+        <form action="">
+          <label for="first-name">First Name:</label>
+          <input type="text" name="first-name" id="first-name" required>
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" name="last-name" id="last-name" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" name="email" id="email" required>
+
+          <label for="phone-number">Phone Number:</label>
+          <input type="number" name="phone-nuymber" id="phone-number">
+        </form>
+      </div>
+
+      <div id="educationExp">
+        <form action="">
+          <label for="school-name">School Name:</label>
+          <input type="text" name="school-name" id="school-name">
+
+          <label for="major">Major:</label>
+          <input type="text" name="major" id="major">
+
+          <label for="study-date">Date of Study:</label>
+          <input type="date" name="study-date" id="study-date">
+        </form>
+      </div>
+
+      <div id="practicalExp">
+        <form action="">
+          <label for="company">Company Name:</label>
+          <input type="text" name="company" id="company">
+
+          <label for="position">Position Title</label>
+          <input type="text" name="position" id="position">
+
+          <label for="jobDesc">What were the main responsibilities of your job?</label>
+          <input type="text" name="jobDesc" id="jobDesc">
+
+          <label for="workStartDate">Start of Work Date:</label>
+          <input type="date" name="workStartDate" id="workStartDate">
+
+          <label for="workEndDate">End of Work Date:</label>
+          <input type="date" name="workEndDate" id="workEndDate">
+        </form>
+      </div>
+
+      <button>Cancel</button>
+      <button>Submit</button>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
