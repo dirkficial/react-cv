@@ -49,7 +49,7 @@ export default function CVSection({ fields, initialValues, onSectionSubmit}) {
                         )}
                     </div>
                 ))}
-                <button type="submit">Submit</button>
+                <button type="submit">Save</button>
             </form>
         </div>
     )
