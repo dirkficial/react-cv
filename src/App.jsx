@@ -28,8 +28,8 @@ export default function App() {
     return (
         <div>
             <PersonalInfo info={info.personal} onSectionSubmit={onSectionSubmit}/>
-            <EduExperience onSectionSubmit={onSectionSubmit}/>
-            <PracticalExperience onSectionSubmit={onSectionSubmit}/>
+            <EduExperience info={info.education} onSectionSubmit={onSectionSubmit}/>
+            <PracticalExperience info={info.practical} onSectionSubmit={onSectionSubmit}/>
             <button onClick={togglePreview}>Preview</button>
         </div>
     )
