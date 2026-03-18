@@ -10,11 +10,19 @@ const fields = [
 
 const initialValues = { companyName: "", positionTitle: "", responsibilities: "", fromDate: "", untilDate: "" }
 
-export default function PracticalExperience({onSectionSubmit}) {
+export default function PracticalExperience({info, onSectionSubmit}) {
 
     function handleSubmit(values) {
         onSectionSubmit({practical : values})
     }
 
-    return <CVSection fields={fields} initialValues={initialValues} onSectionSubmit={handleSubmit}/>
+    return (
+    <div>
+        {info != null ? 
+        <CVSection fields={fields} initialValues={info} onSectionSubmit={handleSubmit}/>
+        :
+        <CVSection fields={fields} initialValues={initialValues} onSectionSubmit={handleSubmit}/>
+        }
+    </div>
+    )
 }

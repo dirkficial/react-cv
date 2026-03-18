@@ -1,4 +1,4 @@
-export default function CVPreview({personal, education, practical}) {
+export default function CVPreview({personal, education, practical, onClick}) {
     return (
         <div>
             {personal && 
@@ -26,6 +26,7 @@ export default function CVPreview({personal, education, practical}) {
                 <p>{practical.responsibilities}</p> 
             </div>
             }
+            <button onClick={onClick}>Edit</button>
         </div>
     )
 }

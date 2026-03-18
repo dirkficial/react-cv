@@ -17,16 +17,20 @@ export default function App() {
         setEditMode(false);
     }
 
+    function toggleEdit() {
+        setEditMode(true);
+    }
+
     if (!editMode) {
-        return <CVPreview personal={info.personal} education={info.education} practical={info.practical}/>
+        return <CVPreview personal={info.personal} education={info.education} practical={info.practical} onClick={toggleEdit}/>
     }
 
     return (
-        <>
-            <PersonalInfo onSectionSubmit={onSectionSubmit}/>
+        <div>
+            <PersonalInfo info={info.personal} onSectionSubmit={onSectionSubmit}/>
             <EduExperience onSectionSubmit={onSectionSubmit}/>
             <PracticalExperience onSectionSubmit={onSectionSubmit}/>
             <button onClick={togglePreview}>Preview</button>
-        </>
+        </div>
     )
 }

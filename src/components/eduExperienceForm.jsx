@@ -9,11 +9,19 @@ const fields = [
 
 const initialValues = { school: "", major: "", startDate: "", endDate: "" }
 
-export default function EduExperience({onSectionSubmit}) {
+export default function EduExperience({info, onSectionSubmit}) {
 
     function handleSubmit(values) {
         onSectionSubmit({education : values})
     }
 
-    return <CVSection fields={fields} initialValues={initialValues} onSectionSubmit={handleSubmit}/>
+    return (
+    <div>
+        {info != null ?         
+        <CVSection fields={fields} initialValues={info} onSectionSubmit={handleSubmit}/>
+        : 
+        <CVSection fields={fields} initialValues={initialValues} onSectionSubmit={handleSubmit}/>
+        }
+    </div>
+    )
 }

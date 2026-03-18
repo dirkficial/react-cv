@@ -9,11 +9,19 @@ const fields = [
 
 const initialValues = { firstName: "John", lastName: "Doe", email: "johndoe@email.com", phone: "123-456-7890" }
 
-export default function PersonalInfo({onSectionSubmit}) {
+export default function PersonalInfo({info, onSectionSubmit}) {
 
     function handleSubmit(values) {
         onSectionSubmit({personal : values})
     }
 
-    return <CVSection fields={fields} initialValues={initialValues} onSectionSubmit={handleSubmit}/>
+    return (
+    <div>
+        {info != null ?          
+        <CVSection fields={fields} initialValues={info} onSectionSubmit={handleSubmit}/>
+        :
+        <CVSection fields={fields} initialValues={initialValues} onSectionSubmit={handleSubmit}/>
+        }         
+    </div>
+    )
 }
