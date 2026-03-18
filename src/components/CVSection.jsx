@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function CVSection({ fields, initialValues }) {
+export default function CVSection({ fields, initialValues, onSectionSubmit}) {
     const [values, setValues] = useState(initialValues);
     const [isEditing, setIsEditing] = useState(true);
 
@@ -11,6 +11,7 @@ export default function CVSection({ fields, initialValues }) {
     function onSubmit(e) {
         e.preventDefault();
         setIsEditing(false);
+        onSectionSubmit(values);
     }
 
     if (!isEditing) {
