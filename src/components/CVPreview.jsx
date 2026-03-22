@@ -1,19 +1,23 @@
 export default function CVPreview({personal, education, practical, onClick}) {
     return (
-        <div>
+        <div id="preview">
             {personal && 
             <div id="header">
                 <h1>{personal.firstName + ' ' + personal.lastName}</h1>
-                <p>{personal.phone}</p>
-                <p>{personal.email}</p>
+                <p>{personal.phone + ' | ' + personal.email + ' | ' + personal.linkedin + ' | ' + personal.github}</p>
             </div>
             }
+            <h2>EDUCATION</h2>
             {education && 
             <div id="education">
-                <h2>EDUCATION</h2>
-                <p>{education.school}</p>
-                <p>{education.major}</p>
-                <p>{education.startDate + '-' + education.endDate}</p>
+                <div id="schoolLocation">
+                    <p>{education.school}</p>
+                    <p>{education.location}</p>
+                </div>
+                <div id="majorDate">
+                    <p>{education.major}</p>
+                    <p>{education.startDate + '-' + education.endDate}</p>
+                </div>
             </div>
             }
             {practical && 

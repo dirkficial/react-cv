@@ -38,6 +38,15 @@ export default function CVSection({ fields, initialValues, onSectionSubmit}) {
                                 value={values[field.name]}
                                 onChange={onChange}
                             />
+                        ) : field.pattern != "null" ? (
+                            <input
+                                type={field.type}
+                                name={field.name}
+                                id={field.name}
+                                value={values[field.name]}
+                                onChange={onChange}
+                                pattern={field.pattern}
+                            />
                         ) : (
                             <input
                                 type={field.type}

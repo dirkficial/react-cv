@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 export default function App() {
-    const [editMode, setEditMode] = useState(true);
+    const [editMode, setEditMode] = useState(false);
     const [info, setInfo] = useState({personal : null, education : null, practical : null})
 
     function onSectionSubmit(sectionInfo) {

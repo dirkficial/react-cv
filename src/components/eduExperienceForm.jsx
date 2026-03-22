@@ -2,12 +2,13 @@ import CVSection from "./CVSection"
 
 const fields = [
     { label: "School Name", name: "school", type: "text" },
+    { label: "School Location", name: "location", type: "text"},
     { label: "Title of Study", name: "major", type: "text" },
-    { label: "Start Date of Study", name: "startDate", type: "date" },
-    { label: "End Date of Study", name: "endDate", type: "date" },
+    { label: "Start Date of Study", name: "startDate", type: "month" },
+    { label: "End Date of Study", name: "endDate", type: "month" },
 ]
 
-const initialValues = { school: "", major: "", startDate: "", endDate: "" }
+const initialValues = { school: "", location: "", major: "", startDate: "", endDate: "" }
 
 export default function EduExperience({info, onSectionSubmit}) {
 
